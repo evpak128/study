@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="hr_hosp_disease_data_tuberculosis" model="hr.hosp.disease"  forcecreate="True">
+        <field name="name">Tuberculosis</field>
+    </record>
+    <record id="hr_hosp_disease_data_diabetes" model="hr.hosp.disease"  forcecreate="True">
+        <field name="name">Diabetes</field>
+    </record>
+        <record id="hr_hosp_disease_data_ebola" model="hr.hosp.disease"  forcecreate="True">
+        <field name="name">Ebola</field>
+    </record>
+
+</odoo>
