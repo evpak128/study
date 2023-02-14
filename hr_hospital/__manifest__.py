@@ -2,7 +2,7 @@
     'name': 'Hospital',
     'version': '15.0.1.0.0',
     'category': 'Extra Tools',
-    'summary': '',
+    'summary': 'Hospital Management',
     'license': 'LGPL-3',
     'author': 'evpak128',
     'website': '',
@@ -23,6 +23,7 @@
         'data/doctor_demo.xml',
         'data/patient_demo.xml'
     ],
+    # Потрібно прибирати порожні параметри
     'support': '',
     'application': False,
     'installable': True,

@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+        <!-- Назва "id" згідно рекомендацій - "hr_hospital_menu_main" -->
+        <!-- Помилка у параметрі "web_icon" - повинна бути повна назва модуля -->
         <menuitem id="hr_hosp_main_menu"
-                  web_icon="hr_hosp,static/description/icon.png"
+                  web_icon="hr_hospital,static/description/icon.png"
                   name="Hospital" sequence="300"/>
 
+        <!-- Назва меню краще давати просто "Patients" -->
+        <!-- Краще додати "action", щоб список відображався при натисканні  -->
         <menuitem id="hr_hosp_patient_list_menu"
                   parent="hr_hosp_main_menu"
                   name="Patient List" sequence="100"/>
