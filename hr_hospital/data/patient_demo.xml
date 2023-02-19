@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo noupdate="1">
 
-    <record id="hr_hosp_disease_peterson" model="hr.hosp.patient">
+    <record id="hr_hospital_disease_peterson" model="hr.hospital.patient">
         <field name="name">Bobbi Peterson</field>
     </record>
-    <record id="hr_hosp_disease_palladino" model="hr.hosp.patient">
+    <record id="hr_hospital_disease_palladino" model="hr.hospital.patient">
         <field name="name">Humberto Palladino</field>
     </record>
-    <record id="hr_hosp_disease_abaza" model="hr.hosp.patient">
+    <record id="hr_hospital_disease_abaza" model="hr.hospital.patient">
         <field name="name">Mona Abaza</field>
     </record>
 

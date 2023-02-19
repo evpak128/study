@@ -1,5 +1,13 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_hr_hosp_patient__group_user,access__hr.hosp.patient,model_hr_hosp_patient,base.group_user,1,1,1,1
-access_hr_hosp_doctor__group_user,access__hr.hosp.doctor,model_hr_hosp_doctor,base.group_user,1,1,1,1
-access_hr_hosp_disease__group_user,access__hr.hosp.disease,model_hr_hosp_disease,base.group_user,1,1,1,1
-access_hr_hosp_patient_visit__group_user,access__hr.hosp.patient.visit,model_hr_hosp_patient_visit,base.group_user,1,1,1,1
+access_hr_hospital_patient__group_user,access__hr.hospital.patient,model_hr_hospital_patient,base.group_user,1,1,1,1
+access_hr_hospital_doctor__group_user,access__hr.hospital.doctor,model_hr_hospital_doctor,base.group_user,1,1,1,1
+access_hr_hospital_disease__group_user,access__hr.hospital.disease,model_hr_hospital_disease,base.group_user,1,1,1,1
+access_hr_hospital_disease_type__group_user,access__hr.hospital.disease.type,model_hr_hospital_disease_type,base.group_user,1,1,1,1
+access_hr_hospital_patient_visit__group_user,access__hr.hospital.patient.visit,model_hr_hospital_patient_visit,base.group_user,1,1,1,1
+access_hr_hospital_diagnosis__group_user,access__hr.hospital.diagnosis,model_hr_hospital_diagnosis,base.group_user,1,1,1,1
+access_hr_hospital_personal_doctor_history__group_user,access__hr.hospital.personal.doctor.history,model_hr_hospital_personal_doctor_history,base.group_user,1,1,1,1
+access_hr_hospital_research__group_user,access__hr.hospital.research,model_hr_hospital_research,base.group_user,1,1,1,1
+access_hr_hospital_research_type__group_user,access__hr.hospital.research.type,model_hr_hospital_research_type,base.group_user,1,1,1,1
+access_hr_hospital_doctor_schedule__group_user,access__hr.hospital.doctor.schedule,model_hr_hospital_doctor_schedule,base.group_user,1,1,1,1
+access_hr_hospital_contact_person__group_user,access__hr.hospital.contact.person,model_hr_hospital_contact_person,base.group_user,1,1,1,1
+access_hr_hospital_contact_example__group_user,access__hr.hospital.example,model_hr_hospital_example,base.group_user,1,1,1,1
