@@ -24,9 +24,7 @@
                         <field name="disease_id"/>
                         <field name="treatment"/>
                         <field name="date_of_diagnosis"/>
-                        <field name="comment" attrs="{'invisible': [('doctor_is_intern', '!=', True)], 'required': [('doctor_is_intern', '=', True)]}"/>
-                        <field name="doctor_is_intern" invisible="1"/>
-                        <field name="research_ids"/>
+                        <field name="comment"/>
                     </group>
                 </sheet>
             </form>

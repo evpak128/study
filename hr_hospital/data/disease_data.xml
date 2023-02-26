@@ -10,5 +10,7 @@
         <record id="hr_hospital_disease_data_ebola" model="hr.hospital.disease"  forcecreate="True">
         <field name="name">Ebola</field>
     </record>
-
+    <record id="hr_hospital_disease_data_covid_19" model="hr.hospital.disease"  forcecreate="True">
+        <field name="name">Covid-19</field>
+    </record>
 </odoo>

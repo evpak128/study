@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import models, fields, _
 
 
 class AbstractPerson(models.AbstractModel):
@@ -8,7 +8,7 @@ class AbstractPerson(models.AbstractModel):
     name = fields.Char()
     phone_number = fields.Char()
     email = fields.Char()
-    gender = fields.Selection(selection=[('male', 'Male'),
-                                         ('female', 'Female'),
-                                         ('other', 'Other / Undefined')])
+    gender = fields.Selection(selection=[('male', _('Male')),
+                                         ('female', _('Female')),
+                                         ('other', _('Other / Undefined'))])
     photo = fields.Binary()

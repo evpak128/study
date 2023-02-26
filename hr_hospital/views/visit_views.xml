@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="patient_id"/>
-
+                <field name="is_visit_done"/>
             </tree>
         </field>
     </record>
@@ -23,15 +23,8 @@
                         <field name="diagnosis_id"/>
                         <field name="patient_id"/>
                         <field name="date_of_visit"/>
-                        <field name="recommendation"/>
-                        <field name="research_ids"/>
-                        <field name="doctor_schedule_ids">
-                            <tree>
-                                <field name="doctor_id" attrs="{'readonly': [('is_visit_done', '!=', False)]}"/>
-                                <field name="start_date" attrs="{'readonly': [('is_visit_done', '!=', False)]}"/>
-                                <field name="end_date" attrs="{'readonly': [('is_visit_done', '!=', False)]}"/>
-                                <field name="is_visit_done"/>
-                            </tree>
+                        <field name="is_visit_done"/>
+                        <field name="recommendation">
                         </field>
                     </group>
                 </sheet>

@@ -3,13 +3,10 @@ from . import (
     patient,
     doctor,
     disease,
-    disease_type,
+    disease_category,
     visit,
     diagnosis,
     personal_doctor_history,
-    research,
-    research_type,
     doctor_schedule,
-    contact_person,
-    example
+    contact_person
 )

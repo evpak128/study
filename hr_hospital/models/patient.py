@@ -8,15 +8,16 @@ class Patient(models.Model):
     _inherit = 'abstract.person'
 
     birthday = fields.Date(string='Date of Birth')
-    age = fields.Integer(compute='compute_age')
+    age = fields.Integer(compute='_compute_age')
     passport_info = fields.Char()
-    doctor_ids = fields.Many2many(comodel_name='hr.hospital.doctor',
-                                  string='Doctors')
-    personal_doctor_id = fields.Many2one(comodel_name='hr.hospital.doctor')
-    disease_ids = fields.Many2many(comodel_name='hr.hospital.disease')
-    contact_person_id = fields.Many2one(comodel_name='hr.hospital.contact.person')
+    personal_doctor_id = fields.Many2one(
+        comodel_name='hr.hospital.doctor')
+    disease_ids = fields.Many2many(
+        comodel_name='hr.hospital.disease')
+    contact_person_id = fields.Many2one(
+        comodel_name='hr.hospital.contact.person')
 
-    def compute_age(self):
+    def _compute_age(self):
         for rec in self:
             if rec.birthday:
                 rec.age = (date.today() - rec.birthday).days // 365

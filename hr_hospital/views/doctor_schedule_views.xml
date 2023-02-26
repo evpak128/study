@@ -9,7 +9,6 @@
                 <field name="doctor_id"/>
                 <field name="start_date"/>
                 <field name="end_date"/>
-
             </tree>
         </field>
     </record>
@@ -21,15 +20,12 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="doctor_id" attrs="{'readonly': [('is_visit_done', '!=', False)]}"/>
-                        <field name="is_visit_done"/>
+                        <field name="doctor_id"/>
                         <label for="start_date" string='Date'/>
                         <div class="o_row">
-                            <field name="start_date" widget="daterange" options="{'related_end_date': 'end_date'}"
-                                   attrs="{'readonly': [('is_visit_done', '!=', False)]}"/>
+                            <field name="start_date" widget="daterange" options="{'related_end_date': 'end_date'}"/>
                             <i class="fa fa-long-arrow-right mx-2" aria-label="Arrow icon" title="Arrow"/>
-                            <field name="end_date" widget="daterange" options="{'related_start_date': 'start_date'}"
-                                   attrs="{'readonly': [('is_visit_done', '!=', False)]}"/>
+                            <field name="end_date" widget="daterange" options="{'related_start_date': 'start_date'}"/>
                         </div>
                     </group>
                 </sheet>

@@ -6,3 +6,4 @@ class Disease(models.Model):
     _description = 'Disease'
 
     name = fields.Char()
+    category_id = fields.Many2one(comodel_name='hr.hospital.disease.category')

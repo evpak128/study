@@ -6,7 +6,7 @@
         <field name="model">hr.hospital.personal.doctor.history</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>
+                <field name="patient_id"/>
                 <field name="appointment_date"/>
             </tree>
         </field>
@@ -19,7 +19,6 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="name"/>
                         <field name="personal_doctor_id"/>
                         <field name="patient_id"/>
                         <field name="appointment_date"/>
