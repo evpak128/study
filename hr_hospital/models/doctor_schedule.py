@@ -8,8 +8,8 @@ class DoctorSchedule(models.Model):
     _rec_name = 'doctor_id'
 
     doctor_id = fields.Many2one(comodel_name='hr.hospital.doctor')
-    start_date = fields.Datetime()
-    end_date = fields.Datetime()
+    start_date = fields.Date()
+    end_date = fields.Date()
     start_time = fields.Float()
     end_time = fields.Float()
     is_visit_done = fields.Boolean()

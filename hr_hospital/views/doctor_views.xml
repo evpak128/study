@@ -12,6 +12,24 @@
         </field>
     </record>
 
+    <record id="hr_hospital_doctor_kanban" model="ir.ui.view">
+        <field name="name">hr.hospital.doctor.kanban</field>
+        <field name="model">hr.hospital.doctor</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" default_group_by="specialty">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div>
+                            <field name="name"/>
+                            <field name="specialty"/>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
     <record id="hr_hospital_doctor_form" model="ir.ui.view">
         <field name="name">hr.hospital.doctor.form</field>
         <field name="model">hr.hospital.doctor</field>
@@ -38,7 +56,7 @@
         <field name="name">Doctor</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">hr.hospital.doctor</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,kanban</field>
     </record>
 
     <menuitem id="hr_hospital_doctor_main_menu"

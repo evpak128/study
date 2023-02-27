@@ -37,6 +37,7 @@ class FillingDoctorChartWizard(models.TransientModel):
                 {
                     'doctor_id': self.doctor_id.id,
                     'start_date': today_day,
+                    'end_date': self.end_date,
                     'start_time': start_time,
                     'end_time': end_time,
                 })
