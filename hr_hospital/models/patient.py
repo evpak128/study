@@ -16,6 +16,12 @@ class Patient(models.Model):
         comodel_name='hr.hospital.disease')
     contact_person_id = fields.Many2one(
         comodel_name='hr.hospital.contact.person')
+    personal_doctors_ids = fields.One2many(
+        comodel_name='hr.hospital.personal.doctor.history',
+        inverse_name='patient_id')
+    diagnosis_history_ids = fields.One2many(
+        comodel_name='hr.hospital.patient.visit',
+        inverse_name='patient_id')
 
     def _compute_age(self):
         for rec in self:

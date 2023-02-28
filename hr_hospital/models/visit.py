@@ -13,7 +13,6 @@ class PatientVisit(models.Model):
     date_of_visit = fields.Datetime(string="Data/Time visit",
                                     default=fields.Datetime.now)
     recommendation = fields.Text()
-    # doctor_schedule_ids = fields.Many2many(comodel_name='hr.hospital.doctor.schedule')
     active = fields.Boolean(default=True)
     is_visit_done = fields.Boolean(string='Visit done', default=False)
 

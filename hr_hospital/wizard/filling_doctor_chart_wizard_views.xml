@@ -33,16 +33,11 @@
         <field name="res_model">hr.hospital.filling.doctor.chart.wizard</field>
         <field name="view_mode">form</field>
         <!--        <field name="view_id" ref="filling_doctor_chart_wizard_view_form"/>-->
-        <!--        <field name="target">new</field>-->
+        <field name="target">new</field>
         <!--        <field name="context">{}</field>-->
         <!--        <field name="binding_model_id" ref="model_hr_hospital_doctor_schedule"/>-->
         <!--        <field name="binding_view_types">list</field>-->
     </record>
-
-<!--    <menuitem id="hr_hospital_services_menu"-->
-<!--              parent="hr_hospital.hr_hospital_main_menu"-->
-<!--              action="hr_hospital.hr_hospital_filling_doctor_chart_wizard"-->
-<!--              name="Wizards" sequence="20"/>-->
 
     <menuitem id="hr_hospital_wizards_root_menu"
               parent="hr_hospital.hr_hospital_main_menu"
