@@ -9,6 +9,7 @@
                 <field name="name"/>
                 <field name="specialty"/>
                 <field name="is_intern"/>
+                <field name="mentor_id"/>
             </tree>
         </field>
     </record>
@@ -20,9 +21,10 @@
             <kanban class="o_kanban_mobile" default_group_by="specialty">
                 <templates>
                     <t t-name="kanban-box">
-                        <div>
-                            <field name="name"/>
-                            <field name="specialty"/>
+                        <div class="oe_kanban_global_click">
+                            <div class="oe_kanban_details">
+                                <field name="name"/>
+                            </div>
                         </div>
                     </t>
                 </templates>
@@ -41,13 +43,26 @@
                         <field name="name"/>
                         <field name="specialty"/>
                         <field name="is_intern"/>
-                        <field name="mentor_id"/>
+                        <field name="mentor_id" attrs="{'invisible':[('is_intern', '=', False)]}"/>
                         <field name="phone_number"/>
                         <field name="email"/>
                         <field name="gender"/>
                         <field name="photo"/>
-
                     </group>
+                    <field name="intern_ids" mode="kanban">
+                        <kanban>
+                            <field name="name"/>
+                            <templates>
+                                <t t-name="kanban-box">
+                                    <div class="oe_kanban_global_click">
+                                        <div class="oe_kanban_details">
+                                            <field name="name"/>
+                                        </div>
+                                    </div>
+                                </t>
+                            </templates>
+                        </kanban>
+                    </field>
                 </sheet>
             </form>
         </field>
