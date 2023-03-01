@@ -34,10 +34,10 @@
             <search>
                 <field name="name"/>
                 <field name="category_id"/>
+                <searchpanel view_types="tree,pivot">
+                    <field name="category_id" hierarchize="1" enable_counters="1"/>
+                </searchpanel>
             </search>
-            <searchpanel view_types="tree,pivot">
-                <field name="category_id" hierarchize="1" enable_counters="1"/>
-            </searchpanel>
         </field>
     </record>
 
