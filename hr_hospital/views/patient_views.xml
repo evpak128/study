@@ -1,44 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="hr_hosp_patient_tree" model="ir.ui.view">
-        <field name="name">hr.hosp.patient.tree</field>
-        <field name="model">hr.hosp.patient</field>
+    <record id="hr_hospital_patient_tree" model="ir.ui.view">
+        <field name="name">hr.hospital.patient.tree</field>
+        <field name="model">hr.hospital.patient</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="medical_card_number"/>
-
+                <field name="personal_doctor_id"/>
             </tree>
         </field>
     </record>
 
-    <record id="hr_hosp_patient_form" model="ir.ui.view">
-        <field name="name">hr.hosp.patient.form</field>
-        <field name="model">hr.hosp.patient</field>
+    <record id="hr_hospital_patient_create_patient_visit_action_form" model="ir.actions.act_window">
+        <field name="name">Create visits</field>
+        <field name="res_model">hr.hospital.patient.visit</field>
+        <field name="view_mode">form</field>
+        <field name="context">{'default_patient_id': active_id}</field>
+    </record>
+
+    <record id="hr_hospital_patient_form" model="ir.ui.view">
+        <field name="name">hr.hospital.patient.form</field>
+        <field name="model">hr.hospital.patient</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>
+                    <header>
+                        <button name="analysis_history"
+                                type="object"
+                                class="btn btn-primary"
+                                string="Analysis History"/>
+                        <button name="visit_history"
+                                type="object"
+                                class="btn btn-primary"
+                                string="Visit History"/>
+                        <button name="diagnosis_history"
+                                type="object"
+                                class="btn btn-primary"
+                                string="Diagnosis History"/>
+                        <button class="btn btn-primary"
+                                type="action"
+                                name="%(hr_hospital_patient_create_patient_visit_action_form)d"
+                                string="Create visit"/>
+                    </header>
                     <group>
                         <field name="name"/>
-                        <field name="medical_card_number"/>
-                        <field name="doctor_ids" widget="many2many_tags"/>
-                        <field name="disease_ids" widget="many2many_tags"/>
+                        <field name="birthday"/>
+                        <field name="phone_number"/>
+                        <field name="email"/>
+                        <field name="gender"/>
+                        <field name="photo"/>
+                        <field name="age"/>
+                        <field name="passport_info"/>
+                        <field name="personal_doctor_id"/>
+                        <field name="personal_doctors_ids">
+                            <tree>
+                                <field name="personal_doctor_id"/>
+                                <field name="appointment_date"/>
+                            </tree>
+                        </field>
+                        <field name="disease_history_ids">
+                            <tree>
+                                <field name="disease_id"/>
+                                <field name="date_of_diagnosis"/>
+                            </tree>
+                        </field>
+                        <field name="contact_person_id"/>
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
-    <record id="hr_hosp_patient_act_window" model="ir.actions.act_window">
+
+    <record id="hr_hospital_patient_act_window" model="ir.actions.act_window">
         <field name="name">Patient</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">hr.hosp.patient</field>
+        <field name="res_model">hr.hospital.patient</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="hr_hosp_patient_menu"
-              parent="hr_hospital.hr_hosp_patient_list_menu"
-              action="hr_hospital.hr_hosp_patient_act_window"
-              name="Patient" sequence="200"/>
+    <menuitem id="hr_hospital_patient_menu"
+              parent="hr_hospital.hr_hospital_main_menu"
+              action="hr_hospital.hr_hospital_patient_act_window"
+              name="Patients" sequence="20"/>
 </odoo>
-

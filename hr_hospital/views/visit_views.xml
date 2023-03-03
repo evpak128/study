@@ -1,42 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="hr_hosp_patient_visit_tree" model="ir.ui.view">
-        <field name="name">hr.hosp.patient.visit.tree</field>
-        <field name="model">hr.hosp.patient.visit</field>
+    <record id="hr_hospital_patient_visit_tree" model="ir.ui.view">
+        <field name="name">hr.hospital.patient.visit.tree</field>
+        <field name="model">hr.hospital.patient.visit</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>
-
+                <field name="patient_id"/>
+                <field name="doctor_id"/>
+                <field name="diagnosis_id"/>
+                <field name="date_of_visit"/>
+                <field name="is_visit_done"/>
             </tree>
         </field>
     </record>
 
-    <record id="hr_hosp_patient_visit_form" model="ir.ui.view">
-        <field name="name">hr.hosp.patient.visit.form</field>
-        <field name="model">hr.hosp.patient.visit</field>
+    <record id="hr_hospital_patient_visit_form" model="ir.ui.view">
+        <field name="name">hr.hospital.patient.visit.form</field>
+        <field name="model">hr.hospital.patient.visit</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>
                     <group>
-                        <field name="name"/>
-                        <field name="patient_ids" widget="many2many_tags"/>
+                        <field name="doctor_id"/>
+                        <field name="diagnosis_id"/>
+                        <field name="patient_id"/>
+                        <field name="date_of_visit"/>
+                        <field name="is_visit_done"/>
+                        <field name="recommendation">
+                        </field>
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
 
-    <record id="hr_hosp_patient_visit_act_window" model="ir.actions.act_window">
-        <field name="name">Patient Visit</field>
-        <field name="type">ir.actions.act_window</field>
-        <field name="res_model">hr.hosp.patient.visit</field>
-        <field name="view_mode">tree,form</field>
+    <record id="hr_hospital_patient_visit_calendar" model="ir.ui.view">
+        <field name="name">hr.hospital.patient.visit.calendar</field>
+        <field name="model">hr.hospital.patient.visit</field>
+        <field name="arch" type="xml">
+            <calendar date_start="date_of_visit" mode="month" color="doctor_id">
+                <field name="doctor_id" avatar_field="avatar_128"/>
+                <field name="patient_id" avatar_field="avatar_128"/>
+                <field name="is_visit_done"/>
+            </calendar>
+        </field>
     </record>
 
-    <menuitem id="hr_hosp_patient_visit_menu"
-              parent="hr_hospital.hr_hosp_patient_visit_list_menu"
-              action="hr_hospital.hr_hosp_patient_visit_act_window"
-              name="Patient Visit" sequence="200"/>
+    <record id="hr_hospital_patient_visit_act_window" model="ir.actions.act_window">
+        <field name="name">Patient Visit</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.hospital.patient.visit</field>
+        <field name="view_mode">tree,form,calendar</field>
+    </record>
+
+    <menuitem id="hr_hospital_patient_visit_menu"
+              parent="hr_hospital.hr_hospital_main_menu"
+              action="hr_hospital.hr_hospital_patient_visit_act_window"
+              name="Patient Visits" sequence="30"/>
 </odoo>
 
