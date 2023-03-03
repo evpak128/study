@@ -7,7 +7,7 @@ class DiseaseReportCount(models.TransientModel):
 
     def get_disease_report(self):
         html_table = '<table class="table table-bordered"><tbody>'
-        html_table += f'<tr><th>Disease</th><th>Count</th>'
+        html_table += '<tr><th>Disease</th><th>Count</th>'
         disease_data = self.env.context.get("data")
         for user in disease_data:
             html_table += f'<tr><td>{user["disease"]}</td><td>{user["count"]}</td>'

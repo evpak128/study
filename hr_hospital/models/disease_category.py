@@ -40,9 +40,8 @@ class DiseaseType(models.Model):
         for obj in self:
             obj.disease_count = self.env[
                 'hr.hospital.disease'].search_count([
-                ('category_id', 'child_of', obj.id),
-
-            ])
+                    ('category_id', 'child_of', obj.id)
+                ])
 
     @api.constrains('parent_id')
     def _check_category_recursion(self):

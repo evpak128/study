@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo noupdate="1">
 
-    <record id="hr_hospital_disease_gayle" model="hr.hospital.doctor">
-        <field name="name">Dr. Helene D. Gayle</field>
+    <record id="hr_hospital_disease_stallone" model="hr.hospital.doctor">
+        <field name="name">Sylvester Stallone</field>
+        <field name="specialty">Psychiatrist</field>
+
     </record>
-    <record id="hr_hospital_disease_abbott" model="hr.hospital.doctor">
-        <field name="name">Dr. Myles. B. Abbott</field>
+    <record id="hr_hospital_disease_jolie" model="hr.hospital.doctor">
+        <field name="name">Angelina Jolie</field>
+        <field name="specialty">Infectionist</field>
     </record>
-    <record id="hr_hospital_disease_andrews" model="hr.hospital.doctor">
-        <field name="name">Dr. James Andrews</field>
+    <record id="hr_hospital_disease_Freeman" model="hr.hospital.doctor">
+        <field name="name">Morgan Freeman</field>
+        <field name="specialty">Therapist</field>
     </record>
 
 </odoo>

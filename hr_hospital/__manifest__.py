@@ -2,9 +2,10 @@
     'name': 'Hospital',
     'version': '15.0.1.0.0',
     'category': 'Extra Tools',
-    'summary': '',
+    'summary': 'Module for hospital automation:'
+               ' keeping records of doctors and patients.',
     'license': 'LGPL-3',
-    'author': 'evpak128',
+    'author': 'Oleksandr Yevpak',
     'website': '',
     'depends': [
         'base',
@@ -12,6 +13,7 @@
     ],
     'data': [
         'security/ir.model.access.csv',
+        'data/disease_category_data.xml',
         'data/disease_data.xml',
         'views/hospital_menus.xml',
         'views/patient_views.xml',
@@ -22,6 +24,8 @@
         'views/visit_views.xml',
         'views/diagnosis_views.xml',
         'views/personal_doctor_history_views.xml',
+        'views/disease_history_views.xml',
+        'views/analysis_views.xml',
         'wizard/personal_doctor_change_views.xml',
         'wizard/disease_report_wizard_views.xml',
         'wizard/disease_report_count_wizard_views.xml',
@@ -31,7 +35,6 @@
         'data/doctor_demo.xml',
         'data/patient_demo.xml'
     ],
-    'support': '',
     'application': False,
     'installable': True,
     'auto_install': False,

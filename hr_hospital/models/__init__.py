@@ -8,5 +8,7 @@ from . import (
     diagnosis,
     personal_doctor_history,
     doctor_schedule,
-    contact_person
+    contact_person,
+    disease_history,
+    analysis
 )

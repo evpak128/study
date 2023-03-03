@@ -6,7 +6,10 @@
         <field name="model">hr.hospital.diagnosis</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="patient_id"/>
+                <field name="doctor_id"/>
                 <field name="name"/>
+                <field name="treatment"/>
             </tree>
         </field>
     </record>
@@ -22,6 +25,7 @@
                         <field name="doctor_id"/>
                         <field name="patient_id"/>
                         <field name="disease_id"/>
+                        <field name="category_id"/>
                         <field name="treatment"/>
                         <field name="date_of_diagnosis"/>
                         <field name="comment"/>
@@ -31,11 +35,34 @@
         </field>
     </record>
 
+    <record id="hr_hospital_diagnosis_graph" model="ir.ui.view">
+        <field name="name">hr.hospital.diagnosis.graph</field>
+        <field name="model">hr.hospital.diagnosis</field>
+        <field name="arch" type="xml">
+            <graph type="bar">
+                <field name="date_of_diagnosis" interval="month"/>
+                <field name="category_id"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="hr_hospital_diagnosis_pivot" model="ir.ui.view">
+        <field name="name">hr.hospital.diagnosis.pivot</field>
+        <field name="model">hr.hospital.diagnosis</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="date_of_diagnosis" interval="month" type="col"/>
+                <field name="category_id" type="row"/>
+                <field name="disease_id" type="row"/>
+            </pivot>
+        </field>
+    </record>
+
     <record id="hr_hospital_diagnosis_act_window" model="ir.actions.act_window">
         <field name="name">Diagnosis</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">hr.hospital.diagnosis</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,pivot,graph</field>
     </record>
 
     <menuitem id="hr_hospital_diagnosis_menu"

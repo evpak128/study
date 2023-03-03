@@ -12,3 +12,5 @@ access_personal_doctor_change__group_user,access__personal.doctor.change,hr_hosp
 access_disease_report_wizard__group_user,access__disease.report.wizard,hr_hospital.model_disease_report_wizard,base.group_user,1,1,1,1
 access_disease_report_count_wizard__group_user,access__disease.report.count.wizard,hr_hospital.model_disease_report_count_wizard,base.group_user,1,1,1,1
 access_hr_hospital_filling_doctor_chart_wizard__group_user,access__hr.hospital.filling.doctor.chart.wizard,model_hr_hospital_filling_doctor_chart_wizard,base.group_user,1,1,1,1
+access_hr_hospital_disease_history__group_user,access__hr.hospital.disease.history,model_hr_hospital_disease_history,base.group_user,1,1,1,1
+access_hr_hospital_analysis__group_user,access__hr.hospital.analysis,model_hr_hospital_analysis,base.group_user,1,1,1,1
