@@ -30,6 +30,8 @@
         'wizard/disease_report_wizard_views.xml',
         'wizard/disease_report_count_wizard_views.xml',
         'wizard/filling_doctor_chart_wizard_views.xml',
+        'report/models_report.xml',
+        'report/models_reports_templates.xml',
     ],
     'demo': [
         'data/doctor_demo.xml',

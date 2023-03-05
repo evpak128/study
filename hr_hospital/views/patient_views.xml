@@ -65,6 +65,7 @@
                                 <field name="date_of_diagnosis"/>
                             </tree>
                         </field>
+                        <field name="status"/>
                         <field name="contact_person_id"/>
                     </group>
                 </sheet>

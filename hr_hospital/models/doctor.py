@@ -14,3 +14,5 @@ class Doctor(models.Model):
                                  inverse_name='mentor_id')
     personal_patient_ids = fields.One2many(comodel_name='hr.hospital.patient',
                                            inverse_name='personal_doctor_id')
+    visit_ids = fields.One2many(comodel_name='hr.hospital.patient.visit',
+                                inverse_name='doctor_id')

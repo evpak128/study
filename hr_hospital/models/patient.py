@@ -20,6 +20,9 @@ class Patient(models.Model):
     disease_history_ids = fields.One2many(
         comodel_name='hr.hospital.disease.history',
         inverse_name='patient_id')
+    status = fields.Selection(selection=[('easy', _('Easy')),
+                                         ('medium', _('Medium')),
+                                         ('hard', _('Hard'))])
 
     def _compute_age(self):
         for rec in self:

@@ -31,14 +31,39 @@
                 <templates>
                     <t t-name="kanban-box">
                         <div class="oe_kanban_global_click">
-                            <div class="oe_kanban_details">
-                                <field name="name"/>
+                            <div class="oe_kanban_card_header_title">
+                                <span>Name:
+                                    <field name="name"/>
+                                </span>
+                                <br/>
+                                <span>Specialty:
+                                    <field name="specialty"/>
+                                </span>
+                                <br/>
+                                <span>Patients:
+                                    <field name="personal_patient_ids" widget="many2many_tags"/>
+                                </span>
                             </div>
-                        </div>
-                        <div class="oe_kanban_footer">
-                            <button class="btn btn-primary" type="action"
-                                    name="%(hr_hospital_patient_visit_action_form)d">Create visit
-                            </button>
+                            <div class="oe_kanban_footer">
+                                <button class="btn btn-primary" type="action"
+                                        name="%(hr_hospital_patient_visit_action_form)d">Create visit
+                                </button>
+                            </div>
+                            <div class="o_dropdown_kanban dropdown">
+                                <a class="dropdown-toggle btn" data-toggle="dropdown"
+                                   href="#">
+                                    <span class="fa fa-ellipsis-v" aria-hidden="true"/>
+                                </a>
+                                <div class="dropdown-menu" role="menu">
+                                    <t t-if="widget.editable">
+                                        <a role="menuitem" type="edit" class="dropdown-item">Edit</a>
+                                    </t>
+                                    <t t-if="widget.deletable">
+                                        <a role="menuitem" type="delete" class="dropdown-item">Delete</a>
+                                    </t>
+                                    <ul class="oe_kanban_colorpicker" data-field="color"/>
+                                </div>
+                            </div>
                         </div>
                     </t>
                 </templates>
@@ -113,4 +138,3 @@
               action="hr_hospital.hr_hospital_doctor_act_window"
               name="Doctors" sequence="10"/>
 </odoo>
-
