@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="library.library_book_the_call_of_the_ancestors" model="library.book">
+        <field name="name">The call of the ancestors - DLC</field>
+    </record>
+
+    <delete id="library.library_book_20_thousand_leagues_under_water" model="library.book"/>
+
+</odoo>
